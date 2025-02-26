@@ -24,6 +24,17 @@ public class WordFrequency {
         }
         System.out.println("Word Frequency: " + wordFrequency);
 
+
+
+//        public static HashMap<String, Integer> getAuthorMap (Map<String, String> firstMap) {
+//            HashMap<String, Integer> authorMap = new HashMap<>();
+//            for (String author : firstMap.values()) {
+//                authorMap.put(author, authorMap.containsKey(author) ? authorMap.get(author) + 1 : 1);
+//            }
+//            return authorMap;
+//        }
+
+
         Map<Integer, List<String>> frequencyGroups = new HashMap<>();
 
         for (Map.Entry<String, Integer> element : wordFrequency.entrySet()) {
