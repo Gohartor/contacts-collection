@@ -1,18 +1,23 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Set;
+import java.util.TreeSet;
 
 
 public class MergeAndSort {
 
     public static ArrayList<Integer> sortTwoList(ArrayList<Integer> list1, ArrayList<Integer> list2) {
 
-        ArrayList<Integer> mergedList = new ArrayList<>();
+        Set<Integer> mergedList = new TreeSet<>();
 
         mergedList.addAll(list1);
         mergedList.addAll(list2);
-        Collections.sort(mergedList);
 
-        return mergedList;
+
+        // estefade az tree set
+        // bug in ravesh pak kardan data tekrari hast
+
+        return new ArrayList<>(mergedList);
     }
 
     public static void main(String[] args) {

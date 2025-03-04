@@ -50,6 +50,7 @@ public class MyLinkedList<T> implements List<T> {
     public void add(int index, T element) {
         if (index > size) {
             System.out.println("this index ' " + index + " ' more than this Size ' " + size + " '");
+            return;
         }
 
         Node<T> newNode = new Node<>(element);
@@ -79,6 +80,7 @@ public class MyLinkedList<T> implements List<T> {
         if (head == null) {
             return false;
         }
+
         if (head.data.equals(o)) {
             head = head.next;
             size--;
@@ -86,6 +88,7 @@ public class MyLinkedList<T> implements List<T> {
         }
 
         Node<T> current = head;
+
         while (current.next != null && !current.next.data.equals(o)) {
             current = current.next;
         }
@@ -97,6 +100,8 @@ public class MyLinkedList<T> implements List<T> {
         }
         return false;
     }
+
+    // chon ref nadarad khodesh pak mikonad
 
 
 
@@ -120,7 +125,7 @@ public class MyLinkedList<T> implements List<T> {
                 current = current.next;
             }
             removedNode = current.next;
-            current.next = current.next.next;
+            current.next = removedNode.next;
         }
         size--;
         return removedNode.data;
@@ -170,7 +175,6 @@ public class MyLinkedList<T> implements List<T> {
 
 
     public class LinkedListIterator implements Iterator<T> {
-
         private Node<T> current = head;
 
         @Override
@@ -289,7 +293,8 @@ public class MyLinkedList<T> implements List<T> {
 
     public static void main(String[] args) {
 
-        MyLinkedList<String> list = new MyLinkedList<>();
+        List<String> list = new MyLinkedList<>();
+
         boolean added = list.add("car");
         System.out.println("added element? " + added);
 

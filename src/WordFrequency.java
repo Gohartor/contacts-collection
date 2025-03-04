@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class WordFrequency {
 
@@ -16,6 +13,7 @@ public class WordFrequency {
         input.add("kiwi");
         input.add("apple");
         input.add("berry");
+
 
 
         Map<String, Integer> wordFrequency = new HashMap<>();
@@ -41,7 +39,12 @@ public class WordFrequency {
             int frequency = element.getValue();
             String word = element.getKey();
 
-            frequencyGroups.computeIfAbsent(frequency, k -> new ArrayList<>()).add(word);
+            List<String> list2 = frequencyGroups.getOrDefault(frequency, new ArrayList<>());
+
+            list2.add(word);
+
+            frequencyGroups.put(frequency, list2);
+//            frequencyGroups.computeIfAbsent(frequency, k -> new ArrayList<>()).add(word);
         }
 
         System.out.println("Same Length: " + frequencyGroups);

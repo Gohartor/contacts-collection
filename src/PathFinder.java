@@ -4,26 +4,26 @@ class PathFinder {
     public static void main(String[] args) {
 
 
-
-
         // state 01 ----------------------------------------------------------------
 
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("write your input, for example(8,9|9,4|4,7 ... ) : ");
-        String input = sc.nextLine();
-
-        List<String> step1 = new ArrayList<>(Arrays.asList(input.split("\\|")));
-
-        List<Integer> nums = new LinkedList<>();
-
-        for (String pair : step1) {
-            List<String> step2 = new ArrayList<>(Arrays.asList(pair.split(",")));
-
-            nums.add(Integer.parseInt(step2.getFirst()));
-        }
-
-        System.out.println("nums: " + nums);
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.println("write your input, for example(8,9|9,4|4,7 ... ) : ");
+//        String input = sc.nextLine();
+//
+//        String[] step1 = input.split("\\|");
+//
+////        List<String> step1 = new ArrayList<>(Arrays.asList(input.split("\\|")));
+//
+//        List<Integer> nums = new LinkedList<>();
+//
+//        for (String pair : step1) {
+//            List<String> step2 = new ArrayList<>(Arrays.asList(pair.split(",")));
+//
+//            nums.add(Integer.parseInt(step2.getFirst()));
+//        }
+//
+//        System.out.println("nums: " + nums);
 
 
 
