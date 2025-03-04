@@ -84,6 +84,7 @@ public class Contacts {
 
 
     public void searchByNumber(String number) {
+
         for (Contact c : contacts.values()) {
             for (String num : c.getNumbers()) {
                 if (num.contains(number)) {
